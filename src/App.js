@@ -1,4 +1,5 @@
 import React from 'react';
+import CampsiteDetailPage from './pages/CampsiteDetailPage';
 import { Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import ContactPage from './pages/ContactPage';
@@ -12,7 +13,10 @@ function App() {
     <div className="App">
       <Header />
       <Routes>
-
+      <Route
+                    path='directory/:campsiteId'
+                    element={<CampsiteDetailPage />}
+                />
         <Route path='/' element= {<HomePage />}/>
         <Route path='contact' element={<ContactPage/>}/>
         <Route path='directory' element={<CampsitesDirectoryPage/>}/>
