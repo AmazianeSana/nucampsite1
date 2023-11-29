@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Container } from "reactstrap";
 
 import { Row, Col } from 'reactstrap';
-import { Router } from 'react-router-dom';
+
 
 const Footer = () => {
     return (

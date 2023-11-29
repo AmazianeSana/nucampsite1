@@ -1,4 +1,5 @@
-
+import React from 'react';
+import PartnersList from '../features/partners/partnersList';
 import {
     Col,
     Row,
@@ -7,11 +8,12 @@ import {
     CardBody,
     CardHeader
 } from 'reactstrap';
+import SubHeader from '../components/SubHeader';
 
 const AboutPage = () => {
     return (
         <Container>
-
+            <SubHeader current='About Us' />
             <Row className='row-content'>
                 <Col sm='6'>
                     <h3>Our Mission</h3>
@@ -26,7 +28,7 @@ const AboutPage = () => {
                         campsites they have visited with each other.
                     </p>
                 </Col>
-                <Col>
+                <Col sm='6'>
                     <Card>
                         <CardHeader className='bg-primary text-white'>
                             <h3> Facts at a Glance </h3>
@@ -45,6 +47,7 @@ const AboutPage = () => {
                         </CardBody>
                     </Card>
                 </Col>
+
                 <Col>
                     <Card className='bg-light mt-3'>
                         <CardBody>
@@ -53,7 +56,7 @@ const AboutPage = () => {
                                     will go where there is no path, and I will leave
                                     a trail. </p>
                                 <footer className='blockquote-footer'>
-                                Muriel Strode,{' '}
+                                    Muriel Strode,{' '}
                                     <cite title='Source Title'>
                                         "Wind-Wafted Wild Flowers" - The Open Court,
                                         1903
@@ -64,10 +67,12 @@ const AboutPage = () => {
                     </Card>
                 </Col>
             </Row>
+
             <Row className='row-content'>
                 <Col xs='12'>
                     <h3> Community Partners </h3>
                 </Col>
+                <PartnersList />
             </Row>
 
         </Container>
